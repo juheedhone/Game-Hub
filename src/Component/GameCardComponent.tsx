@@ -1,14 +1,16 @@
-import { Box } from '@chakra-ui/react'
-import  { type ReactNode } from 'react'
+import { Box } from "@chakra-ui/react";
+import { type ReactNode } from "react";
 
-interface Props{
-    children: ReactNode
+interface Props {
+  children: ReactNode;
 }
 
-const GameCardComponent = ({children}: Props) => {
+const GameCardComponent = ({ children }: Props) => {
   return (
-  <Box width="300px" borderRadius={10} overflow="hidden">{children}</Box>
-  )
-}
+    <Box borderRadius={10} overflow="hidden">
+      {children}
+    </Box>
+  );
+};
 
-export default GameCardComponent
+export default GameCardComponent;
