@@ -22,21 +22,21 @@ const App = () => {
     <Grid
       // templateAreas={[`'nav' 'main'`, `'nav nav' 'aside main`]}
       templateAreas={{
-        base: `'nav' 'main'`,
-        lg: `'nav nav' 'aside main'`,
+        base: `'nav'     'main'`,
+        lg: `'nav nav'   'aside main'`,
       }}
       templateColumns={{
         base: "1fr",
         lg: "200px 1fr",
       }}
     >
-      <GridItem area="nav">
+      <GridItem area="nav" marginBottom={10}>
         <NavBar
           onSearch={(searchText) => setGameQuery({ ...GameQuery, searchText })}
         />
       </GridItem>
 
-      <GridItem hideBelow="lg" area="aside" paddingX={5}>
+      <GridItem hideBelow="lg" area="aside" paddingX={5} marginTop={4}>
         <GenreList
           selectedGenre={GameQuery.genre}
           onSelectedGenre={(genre) => setGameQuery({ ...GameQuery, genre })}
